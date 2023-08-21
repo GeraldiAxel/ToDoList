@@ -17,7 +17,9 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-    newTask.push(req.body["newItem"]);
+    if(req.body["newItem"]){
+        newTask.push(req.body["newItem"]);
+    }
     res.redirect("/");
 });
 
