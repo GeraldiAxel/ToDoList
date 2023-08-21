@@ -16,7 +16,7 @@ i {
   color: #fff;
 }
 .navbar-mainbg {
-  background-color: #3586ff;
+  background-color: #9EB384;
   padding: 0px;
 }
 #navbarSupportedContent {
@@ -167,7 +167,7 @@ i {
 footer {
   position: relative;
   width: 100%;
-  background: #3586ff;
+  background: #9EB384;
   min-height: 100px;
   padding: 20px 50px;
   display: flex;
@@ -192,19 +192,19 @@ footer .menu li {
 }
 footer .social_icon li a {
   font-size: 2em;
-  color: #ccc;
+  color: #fff;
   margin: 0 10px;
   display: inline-block;
   transition: 0.5s;
 }
 footer .social_icon li a:hover {
   transform: translateY(-15px);
-  color: blue;
+  color: #435334;
 }
 
 footer .menu li a {
   font-size: 1.2em;
-  color: #ccc;
+  color: #ececec;
   margin: 0 10px;
   display: inline-block;
   transition: 0.5s;
