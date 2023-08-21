@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList App</title>
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+    <h1><%= currentDate %></h1>
+    <ul id="todo-list">
+        <% if(locals.newMonthlyItem) { %>
+            <% newMonthlyItem.forEach(element => { %>
+                <div class="item">
+                    <input type="checkbox">
+                    <p>
+                        <%= element %>
+                    </p>
+                </div>
+            <% }); %>
+        <% } %>
+        <form class="input" action="/monthly" method="post">
+            <input type="text" name="newMonthlyItem" id="" placeholder="New Input">
+            <button type="submit">+</button>
+        </form>
+    </ul>
+    <%- include("partials/footer.ejs") %>
+</body>
+</html>
