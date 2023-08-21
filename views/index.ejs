@@ -8,15 +8,20 @@
 <body>
     <%- include("partials/header.ejs") %>
     <h1><%= currentDate %></h1>
-    <ul>
+    <ul id="todo-list">
         <% if(locals.newItem) { %>
             <% newItem.forEach(element => { %>
-                <li><%= element %></li>
+                <div class="item">
+                    <input type="checkbox">
+                    <p>
+                        <%= element %>
+                    </p>
+                </div>
             <% }); %>
         <% } %>
-        <form action="/" method="post">
-            <input type="text" name="newItem" id="">
-            <button type="submit">Add</button>
+        <form class="input" action="/" method="post">
+            <input type="text" name="newItem" id="" placeholder="New Input">
+            <button type="submit">+</button>
         </form>
     </ul>
     <%- include("partials/footer.ejs") %>
