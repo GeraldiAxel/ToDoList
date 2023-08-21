@@ -8,6 +8,17 @@
 <body>
     <%- include("partials/header.ejs") %>
     <h1><%= currentDate %></h1>
+    <ul>
+        <% if(locals.newItem) { %>
+            <% newItem.forEach(element => { %>
+                <li><%= element %></li>
+            <% }); %>
+        <% } %>
+        <form action="/" method="post">
+            <input type="text" name="newItem" id="">
+            <button type="submit">Add</button>
+        </form>
+    </ul>
     <%- include("partials/footer.ejs") %>
 </body>
 </html>
